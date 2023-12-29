@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is your customable dashboard for daily updates on weather, time, stocks and more.">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="js/classes/DynamicLinks.js" defer></script>
+    <script src="js/classes/GetDateAndTime.js" defer></script>
+    <script src="js/classes/HeaderText.js" defer></script>
+    <script src="js/classes/SaveNotes.js" defer></script>
+    <script src="js/classes/GetCurrentWeather.js" defer></script>
+    <script src="js/classes/GetQuotes.js" defer></script>
+    <script src="js/classes/GenerateRandomImage.js" defer></script>
+    <title>My Dashboard</title>
+</head>
+<body>
+<!-- Background Image -->
+     <div id="imageHolder"></div>
+<!-- Header Section -->
+<header class="header">
+    <div class="top-bar">
+    </div>
+</header>
+<!-- Top Section -->
+    <section id="top-section" class="top-section">
+<!-- Headline -->
+    <h1 id="dashboardText" class="headline dynamicHeader" spellcheck="false">
+        My Personal Dashboard
+    </h1>
+    </section>
+<!-- Main Section -->
+    <main class="container"> 
+<!-- Cards -->
+        <div id="card-1" class="card">
+            <p class="category">Favorite Links</p>
+            <div class="line"></div>
+            <ul class="link-list"></ul>
+            <a id="dynamic-link-one" class="add" href="#">&plus; Add new link</a>
+        </div>
+        <div id="card-2" class="card">
+            <p class="category">Weather</p>
+            <div class="line"></div>
+            <div id="weather-data">
+                <!-- Placeholder for weather data -->
+                <div id="weather-today">
+                <p>Today:</p>
+                <p class="weather" id="city"></p>
+                <p class="weather" id="temp"></p>
+                <img id="weather-icon" class="weather" alt="Weather Icon">
+                <p class="weather" id="description"></p>
+                </div>
+                <div id="weather-tomorrow">
+                <p>Tomorrow:</p>
+                <p class="weather" id="city2"></p>
+                <p class="weather" id="temp2"></p>
+                <img id="weather-icon2" class="weather" alt="Weather Icon2">
+                <p class="weather" id="description2"></p>
+                </div>
+            </div>
+            <ul class="weather-list"></ul>
+        </div>
+        <div id="card-3" class="card">
+            <p class="category">Quotes</p>
+            <div class="line"></div>
+            <div id="quotes" class="quote-list"></div>
+            <div id="author"></div>
+        </div>
+        <div id="card-4" class="card">
+            <p class="category">Notes</p>
+            <div class="line"></div>
+            <textarea id="notepad" spellcheck="false"></textarea>
+        </div>
+    </main>
+<!-- Footer Section -->
+    <footer>
+    <div class="bottom-bar">
+        <p id="randomImage">Generate Random Background</p>
+    </div>
+    </footer>
+</body>
+</html>
